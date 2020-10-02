@@ -1,0 +1,81 @@
+
+/* Class = "UINavigationItem"; title = "Контакты"; ObjectID = "0II-M6-pYz"; */
+"0II-M6-pYz.title" = "Контакты";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "0Ic-fe-Ql5"; */
+"0Ic-fe-Ql5.text" = "Значение";
+
+/* Class = "UIButton"; normalTitle = "🗺"; ObjectID = "6hb-k0-3zB"; */
+"6hb-k0-3zB.normalTitle" = "🗺";
+
+/* Class = "UITextField"; placeholder = "Название"; ObjectID = "AXU-cH-vVp"; */
+"AXU-cH-vVp.placeholder" = "Название";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "AYs-4f-UYD"; */
+"AYs-4f-UYD.text" = "Тип";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "CEJ-34-7fl"; */
+"CEJ-34-7fl.text" = "Имя";
+
+/* Class = "UIButton"; normalTitle = "Нет"; ObjectID = "DqX-Jm-aJL"; */
+"DqX-Jm-aJL.normalTitle" = "Нет";
+
+/* Class = "UILabel"; text = "Адрес"; ObjectID = "EYE-Vg-akc"; */
+"EYE-Vg-akc.text" = "Адрес";
+
+/* Class = "UIButton"; normalTitle = "😍"; ObjectID = "IGK-Q1-dQl"; */
+"IGK-Q1-dQl.normalTitle" = "😍";
+
+/* Class = "UINavigationItem"; title = "Фотографии"; ObjectID = "JFP-Xe-O0e"; */
+"JFP-Xe-O0e.title" = "Фотографии";
+
+/* Class = "UITextField"; placeholder = "Адрес: Город, улица"; ObjectID = "Nbz-TP-oDe"; */
+"Nbz-TP-oDe.placeholder" = "Адрес: Город, улица";
+
+/* Class = "UILabel"; text = "SubHeader"; ObjectID = "QHN-pg-LHO"; */
+"QHN-pg-LHO.text" = "Подзаголовок";
+
+/* Class = "UILabel"; text = "Тип"; ObjectID = "UFd-QX-H2b"; */
+"UFd-QX-H2b.text" = "Тип";
+
+/* Class = "UITextField"; placeholder = "Тип"; ObjectID = "dYf-fE-g0p"; */
+"dYf-fE-g0p.placeholder" = "Тип";
+
+/* Class = "UIButton"; normalTitle = "🙂"; ObjectID = "eu6-82-49l"; */
+"eu6-82-49l.normalTitle" = "🙂";
+
+/* Class = "UILabel"; text = "Key"; ObjectID = "f7D-io-WR9"; */
+"f7D-io-WR9.text" = "Ключ";
+
+/* Class = "UILabel"; text = "Я был тут?"; ObjectID = "fcE-fj-1G4"; */
+"fcE-fj-1G4.text" = "Я был тут?";
+
+/* Class = "UILabel"; text = "Header"; ObjectID = "hjI-RJ-jRp"; */
+"hjI-RJ-jRp.text" = "Заголовок";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "j3w-hG-mSa"; */
+"j3w-hG-mSa.text" = "Адрес";
+
+/* Class = "UIButton"; normalTitle = "🙂"; ObjectID = "jOA-kC-0zK"; */
+"jOA-kC-0zK.normalTitle" = "🙂";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jQS-xb-hqE"; */
+"jQS-xb-hqE.normalTitle" = "Кнопка";
+
+/* Class = "UIButton"; normalTitle = "😕"; ObjectID = "lZO-qR-xB5"; */
+"lZO-qR-xB5.normalTitle" = "😕";
+
+/* Class = "UILabel"; text = "Понравилась фотография ?"; ObjectID = "lby-gW-cVR"; */
+"lby-gW-cVR.text" = "Понравилась фотография ?";
+
+/* Class = "UIButton"; normalTitle = "×"; ObjectID = "tB4-4R-NkS"; */
+"tB4-4R-NkS.normalTitle" = "×";
+
+/* Class = "UILabel"; text = "Имя"; ObjectID = "teE-st-FyW"; */
+"teE-st-FyW.text" = "Имя";
+
+/* Class = "UINavigationItem"; title = "Популярные"; ObjectID = "v5z-50-129"; */
+"v5z-50-129.title" = "Популярные";
+
+/* Class = "UIButton"; normalTitle = "Да"; ObjectID = "ycq-ZK-0nV"; */
+"ycq-ZK-0nV.normalTitle" = "Да";
