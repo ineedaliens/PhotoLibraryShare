@@ -1,3 +1,3 @@
 # PhotoLibraryShare
 
-This is my project. This project based on SwiftBook.ru course 
+This is my project
