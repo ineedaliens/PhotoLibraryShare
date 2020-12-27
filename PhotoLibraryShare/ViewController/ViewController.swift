@@ -6,76 +6,76 @@
 //
 
 import UIKit
-// ПОСЛЕ СОЗДАНИЯ МОДЕЛИ COREDATA И ОПРЕДЕЛЕНИЯ ИЗОБРАЖЕНИЯ КАК DATA BINARY - ПО ПРОЕКТУ ПРИДЕТСЯ ИСПРАВЛЯТЬ ОШИБКИ. УДАЛЯТЬ СОЗДАННЫЙ ФАЙЛ СО СТРУКТУТОРОЙ НАШИХ СВОЙСТВ. ИЗОБРАЖЕНИЯ, КОТОРЫЕ ИМЕЕЮТ ВИД UIImage(named: namefuture[indexPath.row].images) НУЖНО ПРИВОДИТЬ К ТАКОМУ ВИДУ: UIImage(data: namefuture[indexPath.row].images! as Data), ТАК КАК НАШИ ИЗОБРАЖЕНИЯ ИМЕЮТ ФОРМАТ BINARY DATA
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    // MARK: - Table view data source
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var img: UIImageView!
     
     
-    // MARK: - Table view data source
+  
     @IBAction func UnwindSegue(segue: UIStoryboardSegue) {
-        guard let svc = segue.source as? SecondViewController else { return } // делаем проверку, если иначе метод не сработает
-        guard let rating = svc.restRating else { return } // делаем проверку 
-        rateButton.setTitle(rating, for: .normal) // присваиваем заголовок нашей кнопке из нашей переменной
+        guard let svc = segue.source as? SecondViewController else { return } 
+        guard let rating = svc.restRating else { return } 
+        rateButton.setTitle(rating, for: .normal) 
     }
     
     
-    // MARK: - Table view data source
-    var nameofsfuture: Namefuture! // создаем экземпляр класса! который находится в struct!
+ 
+    var nameofsfuture: Namefuture! 
     
     
-    // MARK: - Table view data source
-    override func viewWillAppear(_ animated: Bool) { // создаем метод, который пишется до загрузки экрана, так как он стартует раньше. В методе мы прописываем свойство скрытия навбара.
+   
+    override func viewWillAppear(_ animated: Bool) { 
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     
-    // MARK: - Table view data source
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttons = [rateButton, mapButton] // cjplftv vfcсив кнопок
-        for button in buttons { // cоздаем цикл
-            guard let button = button else { break } // делаем проверку и помещаем нашу кнопку в созданую константу, затем уже отрисовываем рамку кнопоко
+        let buttons = [rateButton, mapButton]
+        for button in buttons { 
+            guard let button = button else { break } 
             button.layer.cornerRadius = 5
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.white.cgColor
         }
-        img.contentMode = .scaleAspectFill // растягиваем наше изображение
-        img.clipsToBounds = true // свойство, которое ограничевает изображение нашими рамками экрана, то есть изображение будет граничить с экраном и не будет растягиваться, как будто граница у изображения где за пределами экрана
+        img.contentMode = .scaleAspectFill 
+        img.clipsToBounds = true 
         img.image = UIImage(data: nameofsfuture.images! as Data)
         tableView.backgroundColor = .white
-        tableView.separatorColor = .black // цвет разделителя в таблице
-        tableView.tableFooterView = UIView(frame: CGRect.zero) //чтоб снизу нашей таблички не было никаких строк!
-        title = nameofsfuture.name // делаем заголовок навбара по названию
-        tableView.estimatedRowHeight = 38 // присваиваем высоту ячейки
-        tableView.rowHeight = UITableView.automaticDimension // автоматическое опеределение высоты ячейки
+        tableView.separatorColor = .black 
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        title = nameofsfuture.name 
+        tableView.estimatedRowHeight = 38 
+        tableView.rowHeight = UITableView.automaticDimension 
     }
     
     
-    // MARK: - Table view data source
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     
-    // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // возвращаем количество столбцов ячейки
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
     
-    // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // метод, в котором мы настраиваем нашу ячейку!
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { 
         let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! SecondTableViewCell
         cell1.keyLabel.textColor = .black
         cell1.valueLabel.textColor = .black
-        switch indexPath.row { // делаем конструкцию свитч, в которой мы проверяем, если наша строка равна 0 то в лейблах пишем ... и т д.
+        switch indexPath.row { 
         case 0: cell1.keyLabel.text = "Имя"
             cell1.valueLabel.text = nameofsfuture.name
         case 1:
@@ -90,21 +90,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         default:
             break
         }
-        cell1.backgroundColor = .clear // делаем цвет заливки нашей ячейки прозрачной
+        cell1.backgroundColor = .clear 
         return cell1
     }
     
-    // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // метод, который работает при нажатии на ячейку, при выделении ячкейки
-        tableView.deselectRow(at: indexPath, animated: true) // метод, который скрывает выделение ячейки после нажатия на саму ячейку
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { 
+        tableView.deselectRow(at: indexPath, animated: true) 
     }
     
     
-    // MARK: - Table view data source
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // создаем метод сегвея
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { 
         if segue.identifier == "show3" {
             let dvc = segue.destination as? ThirdViewController
-            dvc?.namefutures = self.nameofsfuture // передаем данные в наш созданный экземпляр класса из этого контроллера
+            dvc?.namefutures = self.nameofsfuture 
         }
     }
 }
